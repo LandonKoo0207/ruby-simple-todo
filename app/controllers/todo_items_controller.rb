@@ -1,8 +1,11 @@
 class TodoItemsController < ApplicationController
   before_action :set_todo_list
+  before_action :set_todo_item, except: [:create]
 
   def create
     @todo_item = @todo_list.todo_items.create(todo_item_params)
+
+    redirect_to @todo_list
   end
 
   private
@@ -13,5 +16,9 @@ class TodoItemsController < ApplicationController
 
   def todo_item_params
     params[:todo_item].permit(:content)
+  end
+
+  def set_todo_item
+    @todo_item = TodoItem.find(params[:id])
   end
 end

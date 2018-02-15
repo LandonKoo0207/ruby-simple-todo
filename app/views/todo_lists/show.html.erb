@@ -1,11 +1,22 @@
 <h2>Title: <%= @todo_list.title %></h2>
 <h3>Description: <%= @todo_list.description %></h3>
-<%= form_for ([@todo_list, @todo_item]) do |f| %>
+<%= form_for ([@todo_list, @todo_list.todo_items.build]) do |f| %>
+  <%= f.text_field :content, placeholder: "New Todo", size: "50" %>
+  <%= f.submit %>
 <% end %>
-New Todo Task: 
 <hr>
-<br>
-
+<h2>Tasks</h2>
+<% if @todo_list.todo_items.count > 0 %>
+<% @todo_list.todo_items.each do |todo_item| %>
+  <%= todo_item.content %>
+  <br>
+<% end %>
+<% else %>
+No tasks have been added.
+<% end %>
+<hr>
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %>
 |
 <%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" } %>
+<br>
+<%= link_to 'Back to Todo Lists', root_path %>

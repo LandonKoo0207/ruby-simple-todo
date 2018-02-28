@@ -1,0 +1,79 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ @import "bootstrap";
+
+body
+{
+	text-align:left;
+	font-size:20px;
+	font-weight:450;
+	padding-top: 20px;
+	width:100%;
+	height:100vh;
+    background: linear-gradient(70deg, #0fb8ad 0%, #B0E9F1 51%, #C2F2DE 75%);
+    color:#00502E;
+    opacity:0.85;
+}
+
+div 
+{
+	margin: auto;
+}
+
+#todo-lists, #todo-list
+{
+	background-color: rgba(206, 230, 220, 0.65);
+}
+
+#create-todo-list 
+{
+	background-color: rgba(206, 230, 220, 0.65);
+	text-align: center;
+	color: #02BFA1;
+}
+
+#create-todo-list > a
+{
+	color: #02BFA1;
+}
+
+div.todo-list-title
+{
+	text-align: center;
+	font-size: 40px;
+	color: #02BFA1;
+	opacity: 1;
+}
+
+div.todo-list-title > a
+{
+	color: #02BFA1;
+}
+
+div.todo-list-title > a:hover
+{
+	color: #F3F3F3;
+	text-decoration: none;
+}
+
+div.todo-list-description
+{
+	text-align: center;
+	font-size: 20px;
+}
+
+div.new-todo-list-title > div > input
+{
+	background-color: #CEE6DC;
+}

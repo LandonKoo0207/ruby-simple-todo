@@ -1,0 +1,7 @@
+<h1>Update Todo Item</h1>
+
+<%= form_for ([@todo_list, @todo_item]) do |f| %>
+  Content: <%= f.text_field :content, size: "50" %>
+  <br>
+  <%= f.submit "Update" %>
+<% end %>

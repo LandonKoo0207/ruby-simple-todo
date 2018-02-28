@@ -8,6 +8,24 @@ class TodoItemsController < ApplicationController
     redirect_to @todo_list
   end
 
+  def destroy
+    @todo_item.destroy
+    redirect_to @todo_list
+  end
+
+  def edit
+  end
+
+  def update
+    if @todo_item.update_attributes(todo_item_params)
+      flash[:success] = "Todo Item successfully updated."
+    else
+      render 'edit'
+    end
+
+    redirect_to @todo_list
+  end
+
   private
 
   def set_todo_list
@@ -19,6 +37,6 @@ class TodoItemsController < ApplicationController
   end
 
   def set_todo_item
-    @todo_item = TodoItem.find(params[:id])
+    @todo_item = @todo_list.todo_items.find(params[:id])
   end
 end

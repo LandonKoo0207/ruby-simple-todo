@@ -11,6 +11,12 @@ class TodoListsController < ApplicationController
 
   def create
     @todo_list = TodoList.create(todo_list_params)
+
+    if @todo_list.save
+      flash[:success] = "The Todo List has been created succeefully."
+    else
+      flash[:warning] = "The Todo List cannot be created. Check the inputs."
+    end
     redirect_to root_path
   end
 
@@ -33,7 +39,7 @@ class TodoListsController < ApplicationController
   private
 
   def todo_list_params
-    params[:todo_list].permit(:title, :description)
+    params.require(:todo_list).permit(:title, :description)
   end
 
   def set_todo_list

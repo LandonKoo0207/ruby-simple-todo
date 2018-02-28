@@ -7,10 +7,7 @@
 <hr>
 <h2>Tasks</h2>
 <% if @todo_list.todo_items.count > 0 %>
-<% @todo_list.todo_items.each do |todo_item| %>
-  <%= todo_item.content %>
-  <br>
-<% end %>
+  <%= render @todo_list.todo_items %>
 <% else %>
 No tasks have been added.
 <% end %>
@@ -18,5 +15,3 @@ No tasks have been added.
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %>
 |
 <%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" } %>
-<br>
-<%= link_to 'Back to Todo Lists', root_path %>

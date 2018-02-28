@@ -1,9 +1,16 @@
-<h1>Todo Lists</h1>
-
+<ul class="list-group">
 <% @todo_lists.each do |todo_list| %>
-  <%= link_to todo_list.title, todo_list_path(todo_list.id) %> <%= todo_list.description %> <br>
+  <li class="list-group-item" id="todo-lists">
+    <div class="todo-list-title">
+      <%= link_to todo_list.title, todo_list_path(todo_list.id) %> 
+    </div>
+    <div class="todo-list-description">
+      <%= todo_list.description %>
+    </div>
+  </li>
 <% end %>
+  <li class="list-group-item" id="create-todo-list">
+    <%= link_to 'New Todo List', new_todo_list_path %>
+  </li>
+</ul>
 
-<br>
-
-<%= link_to 'Create New Todo List', new_todo_list_path %>

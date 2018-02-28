@@ -1,18 +1,21 @@
 <ul class="list-group">
 <%= form_for @todo_list do |f| %>
   <li class="list-group-item" id="todo-list">
+    <div class="new-todo-list-page-title">
+      New Todo List
+    </div>
     <div class="new-todo-list-title">
         Title
       <div>
-        <%= f.text_field :title, size: "50" %>
+        <%= f.text_field :title %>
       </div>
     </div>
     <div class="new-todo-list-description">
       <div>
-      Description: 
+      Description
       </div>
       <div>
-      <%= f.text_area :description, cols: "49", rows: "10" %>
+      <%= f.text_area :description %>
       </div>
     </div>
   </li>

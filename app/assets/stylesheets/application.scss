@@ -16,13 +16,13 @@
 body
 {
 	text-align:left;
-	font-size:20px;
-	font-weight:450;
+	font-size:25px;
+	font-family: 'Roboto Slab', serif;
 	padding-top: 20px;
 	width:100%;
 	height:100vh;
     background: linear-gradient(70deg, #0fb8ad 0%, #B0E9F1 51%, #C2F2DE 75%);
-    color:#00502E;
+    color:#427A63;
     opacity:0.85;
 }
 
@@ -30,6 +30,41 @@ div
 {
 	margin: auto;
 }
+
+input[type=text]
+{
+	padding: 7px 12px;
+	border-radius: 10px;
+	border: 1px solid #74B69A;
+	background-color: #A4E1C7;
+	width: 100%;
+	color:#427A63;
+}
+
+input[type=submit]
+{
+	color:#fff;
+	font-size: 20px;
+	background-color:#427A63;
+	border-radius: 10px;
+	width: 20%;
+	padding: 1% 1%;
+
+}
+
+textarea
+{
+	padding: 7px 12px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #74B69A;
+	background-color: #A4E1C7;
+	width: 100%;
+	height: 150px;
+	color:#427A63;
+}
+
+
 
 #todo-lists, #todo-list
 {
@@ -73,7 +108,27 @@ div.todo-list-description
 	font-size: 20px;
 }
 
-div.new-todo-list-title > div > input
+div.new-todo-list-page-title
 {
-	background-color: #CEE6DC;
+	color: #588C76;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 450;
+	margin-bottom: 10px;
+}
+
+div.new-todo-list-title
+{
+	font-size: 22px;
+	font-weight: 350;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+div.new-todo-list-description
+{
+	font-size: 22px;
+	margin-top: 3%;
+	margin-left: 5%;
+	margin-right: 5%;
 }

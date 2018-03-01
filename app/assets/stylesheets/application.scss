@@ -64,7 +64,29 @@ textarea
 	color:#427A63;
 }
 
+input[type=text]#todo-item-detail
+{
+	font-size: 20px;
+	padding: 3px 12px;
+	border-radius: 10px;
+	border: 1px solid #74B69A;
+	background-color: #A4E1C7;
+	width: 75%;
+	color:#427A63;
+	margin-right: 1%;
+	margin-bottom: 3%;
+}
 
+input[type=submit]#todo-item-submit-detail
+{
+	color:#fff;
+	font-size: 18px;
+	background-color:#427A63;
+	border-radius: 10px;
+	width: 20%;
+	margin-bottom: 1px;
+	padding: 1% 1%;
+}
 
 #todo-lists, #todo-list
 {
@@ -81,6 +103,59 @@ textarea
 #create-todo-list > a
 {
 	color: #02BFA1;
+}
+
+#edit-btn
+{
+	height: 22px;
+	width: 22px;
+	background: url('ic_edit_black.png') no-repeat;
+	border-color: #CEE6DC;
+	border-style: none;
+	text-decoration: none;
+}
+
+#edit-btn:hover
+{
+	background: url('ic_edit_white.png') no-repeat;
+	cursor: pointer;
+	border-color: #CEE6DC;
+	border-style: none;
+	text-decoration: none;
+}
+
+
+#delete-btn
+{
+	height: 22px;
+	width: 22px;
+	background: url('ic_delete_black.png') no-repeat;
+	border-color: #CEE6DC;
+	border-style: none;
+}
+
+#delete-btn:hover
+{
+	background: url('ic_delete_white.png') no-repeat;
+	cursor: pointer;
+	border-color: #CEE6DC;
+	border-style: none;
+}
+
+#todo-detail-nav
+{
+	font-size: 18px;
+	font-color: #f3f3f3;
+	text-align: center;
+	background-color: rgba(206, 230, 220, 0.65);
+}
+
+#todo-detail-nav > a
+{
+	font-size: 18px;
+	color: #02BFA1;
+	text-align: center;
+	background-color: rgba(206, 230, 220, 0.65);
 }
 
 div.todo-list-title
@@ -108,7 +183,15 @@ div.todo-list-description
 	font-size: 20px;
 }
 
-div.new-todo-list-page-title
+div.nav-link, div.nav-link > a
+{
+	font-size: 19px;
+	color: #427A63;
+	text-decoration: underline;
+	text-align: center;
+}
+
+div.page-title
 {
 	color: #588C76;
 	text-align: center;
@@ -132,3 +215,26 @@ div.new-todo-list-description
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
+div.page-title-detail
+{
+	color: #588C76;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 450;
+	margin-bottom: 5px;
+}
+
+div.todo-list-description-detail
+{
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+/* #todo-item-list
+{
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+	border-color: #EBFFF7;
+} */

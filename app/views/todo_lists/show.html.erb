@@ -1,17 +1,22 @@
-<h2>Title: <%= @todo_list.title %></h2>
-<h3>Description: <%= @todo_list.description %></h3>
-<%= form_for ([@todo_list, @todo_list.todo_items.build]) do |f| %>
-  <%= f.text_field :content, placeholder: "New Todo", size: "50" %>
-  <%= f.submit %>
-<% end %>
-<hr>
-<h2>Tasks</h2>
-<% if @todo_list.todo_items.count > 0 %>
-  <%= render @todo_list.todo_items %>
-<% else %>
-No tasks have been added.
-<% end %>
-<hr>
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %>
-|
-<%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" } %>
+<ul class="list-group">
+  <li class="list-group-item" id="todo-lists">
+    <div class="page-title-detail"><%= @todo_list.title %></div>
+    <div class="todo-list-description-detail"><%= @todo_list.description %></div>
+    <%= form_for ([@todo_list, @todo_list.todo_items.build]) do |f| %>
+      <%= f.text_field :content, placeholder: "New Todo", autofocus: "true", id: "todo-item-detail" %><%= f.submit 'New Todo', id: "todo-item-submit-detail" %>
+    <% end %>
+  </li>
+  <% if @todo_list.todo_items.count > 0 %>
+    <%= render @todo_list.todo_items %>
+  <% else %>
+  No todos have been added.
+  <% end %>
+
+  <li class="list-group-item" id="todo-detail-nav">
+    <%= link_to 'Back', root_path %>
+    |
+    <%= link_to 'Edit', edit_todo_list_path(@todo_list) %>
+    |
+    <%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" } %>
+  </li>
+</ul>

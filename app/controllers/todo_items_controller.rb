@@ -5,6 +5,10 @@ class TodoItemsController < ApplicationController
   def create
     @todo_item = @todo_list.todo_items.create(todo_item_params)
 
+    if !@todo_item.save
+      flash[:warning] = "Todo Item couldn't be saved. Try again."
+    end
+
     redirect_to @todo_list
   end
 

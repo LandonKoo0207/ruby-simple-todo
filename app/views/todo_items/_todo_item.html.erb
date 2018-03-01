@@ -1,7 +1,20 @@
 <% if TodoItem.exists?(todo_item.id) %>
-    <%= todo_item.content %>
-    <%= link_to 'Edit', edit_todo_list_todo_item_path(@todo_list, todo_item.id) %>
-    |
-    <%= link_to 'Delete', todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
-    <br>
+<li class="list-group-item" id="todo-lists">
+
+  <div class="row" id="todo-item-list">
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <%= todo_item.content %>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    <%= link_to edit_todo_list_todo_item_path(@todo_list, todo_item.id) do %>
+      <button id="edit-btn"></button>
+    <% end %>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <button id="delete-btn"></button>
+    <% end %>
+    </div>
+  </div>
+</li>
 <% end %>

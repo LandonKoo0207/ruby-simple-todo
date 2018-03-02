@@ -7,7 +7,7 @@
     <div class="new-todo-list-title">
         Title
       <div>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, id: "new-todo-list-text" %>
       </div>
     </div>
     <div class="new-todo-list-description">
@@ -20,7 +20,7 @@
     </div>
   </li>
   <li class="list-group-item" id="create-todo-list">
-    <%= f.submit "Create" %>
+    <%= f.submit "Create", id: "new-todo-list-btn" %>
   </li>
 <% end %>
 </ul>

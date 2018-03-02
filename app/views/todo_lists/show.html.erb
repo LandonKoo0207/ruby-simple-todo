@@ -16,7 +16,9 @@
   <% if @todo_list.todo_items.count > 0 %>
     <%= render @todo_list.todo_items %>
   <% else %>
-  No todos have been added.
+  <li class="list-group-item" id="todo-lists">
+    No todos have been added.
+  </li>
   <% end %>
 
   <li class="list-group-item" id="todo-bottom-nav">

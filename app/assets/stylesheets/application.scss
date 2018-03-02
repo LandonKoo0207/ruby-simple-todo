@@ -145,7 +145,7 @@ input[type=submit]#todo-item-submit-detail
 	border-style: none;
 }
 
-#todo-detail-nav
+#todo-bottom-nav
 {
 	font-size: 18px;
 	font-color: #f3f3f3;
@@ -153,12 +153,25 @@ input[type=submit]#todo-item-submit-detail
 	background-color: rgba(206, 230, 220, 0.65);
 }
 
-#todo-detail-nav > a
+#todo-bottom-nav > a
 {
 	font-size: 18px;
 	color: #02BFA1;
 	text-align: center;
 	background-color: rgba(206, 230, 220, 0.65);
+}
+
+#edit-todo-bottom-nav
+{
+	font-size: 0.85em;
+	text-align: center;
+}
+
+#edit-todo-bottom-nav > a
+{
+	font-size: 0.85em;
+	color: #427A63;;
+	text-align: center;
 }
 
 div.todo-list-title

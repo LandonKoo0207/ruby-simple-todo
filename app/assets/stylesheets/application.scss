@@ -116,6 +116,11 @@
     color: #427a63;;
 }
 
+#edit-todo-item-todo-list-title
+{
+    font-style: italic;
+}
+
 body
 {
     font-family: 'Roboto Slab', serif;
@@ -313,13 +318,16 @@ div.todo-list-description-detail
 div.edit-todo-item-title
 {
     margin-left: 3%;
+    margin-bottom: 1%;
     font-size: 1em;
 }
 
 div.edit-todo-item-list-title
 {
+    margin-top: 3%;
     margin-left: 3%;
     margin-bottom: 3%;
+    text-align: center;
 }
 
 ul > li > div.row

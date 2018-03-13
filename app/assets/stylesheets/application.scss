@@ -134,7 +134,10 @@ body
 
     opacity: .85;
     color: #427a63;
-    background: linear-gradient(70deg, #0fb8ad 0%, #b0e9f1 51%, #c2f2de 75%);
+    /* background: linear-gradient(70deg, #0fb8ad 0%, #b0e9f1 51%, #c2f2de 75%); */
+    /* background: #A9E4CC; */
+    /* background: rgba(140, 220, 213, .85) */
+    background: #8CDCD5;
 }
 
 input[type=text]#new-todo-list-text
@@ -150,9 +153,9 @@ input[type=text]#new-todo-list-text
 
 input[type=submit]#bottom-btn
 {
-    font-size: 20px;
+    font-size: 0.8em;
 
-    width: 20%;
+    width: 20vw;
     padding: 1% 1%;
 
     color: #fff;
@@ -340,8 +343,6 @@ div#new-todo-input-bg
 {
     margin-right: 0;
     margin-left: 0;
-
-    background-color: rgba(206, 230, 220, .65);
 }
 
 div#new-todo-button-bg
@@ -350,6 +351,4 @@ div#new-todo-button-bg
     margin-left: 0;
 
     text-align: left;
-
-    background-color: rgba(206, 230, 220, .65);
 }

@@ -4,12 +4,10 @@
     <div class="todo-list-description-detail"><%= @todo_list.description %></div>
     <%= form_for ([@todo_list, @todo_list.todo_items.build]) do |f| %>
       <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="new-todo-input-bg">
+        <div>
         <%= f.text_field :content, placeholder: "New Todo", autofocus: "true", id: "todo-item-detail" %>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3" id="new-todo-button-bg">
         <%= f.submit 'Add', id: "todo-item-submit-detail" %>
-        </div>
       </div>
     <% end %>
   </li>

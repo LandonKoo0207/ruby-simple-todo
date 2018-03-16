@@ -28,6 +28,13 @@ class TodoListsController < ApplicationController
 
   def update
     @todo_list.update(todo_list_params)
+
+    if @todo_list.save
+      flash[:success] = "The Todo List has been updated succeefully."
+    else
+      flash[:warning] = "The Todo List cannot be updated. Check the inputs."
+      render :new
+    end
     redirect_to root_path
   end
 

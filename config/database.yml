@@ -22,9 +22,9 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
-  database: lk_ruby_pg
-  username: landonkoo_ruby
-  password: Kpk47503!
-  host: lk-ruby-postgres.c3v6rzty6jii.ap-southeast-2.rds.amazonaws.com
-  port: 5432
+  adapter: YOUR_DATABSE_TYPE
+  database: YOUR_DATABASE_NAME
+  username: YOUR_USERNAME
+  password: YOUR_PASSWORD
+  host: YOUR_HOST_DATABASE_URL
+  port: YOUR_DATABASE_PORT
